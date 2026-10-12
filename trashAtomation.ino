@@ -6,7 +6,6 @@ Servo servo;
 #define PIN_ECHO 3
 
 void setup() {
-  Serial.begin(115200);
   servo.attach(5);
   servo.write(90);
   pinMode(PIN_ECHO, INPUT);
@@ -22,8 +21,6 @@ void loop() {
   long time = pulseIn(PIN_ECHO, HIGH);
   
   float distance = time * 0.0343 / 2;
-
-  Serial.println(distance);
 
   if(distance <= 10){
     servo.write(90);

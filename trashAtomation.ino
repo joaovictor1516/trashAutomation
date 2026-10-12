@@ -2,12 +2,12 @@
 
 Servo servo;
 
-#define PIN_TRIG 26
-#define PIN_ECHO 33
+#define PIN_TRIG 1
+#define PIN_ECHO 3
 
 void setup() {
   Serial.begin(115200);
-  servo.attach(15);
+  servo.attach(5);
   servo.write(90);
   pinMode(PIN_ECHO, INPUT);
   pinMode(PIN_TRIG, OUTPUT);
